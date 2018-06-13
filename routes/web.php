@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/activate-email/{user}', 'Auth\ActivateEmailController@activate')->name('activate-email');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
